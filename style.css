@@ -49,12 +49,12 @@
     background: #f05454;
     width: 100%;
     height: 2px;
-    transition: .9s ease;
+    transition: .3s ease;
 }
 
+/* recents */
 #recents
 {
-    height: 560px;
     border: 2px solid red;
     display: flex;
     flex-direction: column;
@@ -62,10 +62,9 @@
 }
 #recent-slideshow
 {
-    width: 80%;
+    width: 90%;
     height: inherit;
     transition: opacity .5s ease-in-out;
-    background: #fff;
 }
 #recent-slideshow img
 {
@@ -73,36 +72,107 @@
     align-self: center;
     height: inherit;
 }
+
+/* about */
 #about
 {
-    height: 700px;
     border: 2px solid rgb(0, 255, 0);
+    padding: 40px;
+}
+#about .intro
+{
+    margin: 60px;
+    padding: 30px;
+}
+#about .dos
+{
+    display: grid;
+    grid-template-areas: 'dos1 dos1 dummy1 dummy1'
+                            'dummy2 dummy2 dos2 dos2';
+}
+.dos-1
+{
+    grid-area: dos1;
+}
+.dummy
+{
+    grid-area: dummy;
+}
+.dos-2
+{
+    grid-area: dos2;
+}
+#about .dos:first-child
+{
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
+/* projects */
 #projects
 {
     height: 700px;
     border: 2px solid rgb(0, 4, 255);
 }
 
+/* contact */
 #contact
 {
     height: 700px;
     border: 2px solid rgb(255, 0, 242);
 }
 
+/* footer */
 footer
 {
     height: 80px;
     border: 2px solid black;
 }
 
+/* utility classes */
+.h-prim
+{
+    color: #171414;
+    font-family: 'Sacramento', sans-serif;
+    font-size: 9rem;
+}
+.h-sec
+{
+    color: #171414;
+    font-size: 2.5rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    margin: 25px auto;
+}
+.h-ter
+{
+    color: #171414;
+    font-size: 2rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+.para
+{
+    color: #171414;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+    width: 80%;
+    text-align: center;
+    padding: 5px 0;
+}
 .prim
 {
     background: #f05454;
 }
-
 .fade
 {
     opacity: 0;
+}
+.flexin
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
