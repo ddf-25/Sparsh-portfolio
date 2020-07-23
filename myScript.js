@@ -1,9 +1,9 @@
 console.log('Hlll');
 let i = 2;
 let s = document.getElementById('recent-slideshow');
-let height= document.getElementById('firstimg').offsetHeight;
-console.log(height);
-s.offsetHeight=height;
+let info= s.getBoundingClientRect();
+console.log(info.height);
+s.style.height= info.height;
 setInterval(() =>
 {
     if (i <= 4)
