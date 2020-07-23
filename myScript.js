@@ -2,8 +2,7 @@ console.log('Hlll');
 let i = 2;
 let s = document.getElementById('recent-slideshow');
 let info= s.getBoundingClientRect();
-console.log(info.height);
-s.style.height= info.height;
+s.style.height= `${Math.round(info.height)}px`;
 setInterval(() =>
 {
     if (i <= 4)
