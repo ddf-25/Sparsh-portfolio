@@ -58,12 +58,14 @@
 #recents {
     border: 2px solid red;
     display: flex;
+    oveflow: auto;
     flex-direction: column;
     align-items: center;
 }
 
 #recent-slideshow {
     width: 90%;
+    overflow: auto;
     transition: opacity .5s ease-in-out;
 }
 
