@@ -60,7 +60,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
 }
 
 #recent-slideshow {
@@ -70,6 +69,7 @@
 
 #recent-slideshow img {
     width: 100%;
+    height: auto;
     align-self: center;
 }
 
