@@ -60,6 +60,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
 }
 
 #recent-slideshow {
@@ -70,12 +71,12 @@
 #recent-slideshow img {
     width: 100%;
     align-self: center;
-    height: inherit;
 }
 
 /* about */
 
 #about {
+    color: #171414;
     border: 2px solid rgb(0, 255, 0);
     padding: 40px;
 }
@@ -87,27 +88,22 @@ padding: 30px;
 
 #about .dos {
     display: grid;
-    grid-template-areas: 'dos1 dos1 dummy1 dummy1' 'dummy2 dummy2 dos2 dos2';
+    grid-template-areas: 'dos1 dos1 dos1 dos1' 'dos2 dos2 dos2 dos2';
 }
 
 .dos-1 {
     grid-area: dos1;
     position: relative;
     animation: left-cross 7s ease 0s infinite forwards;
+    justify-self: start;
+    width: 50%;
 }
-
-.dummy1 {
-    grid-area: dummy1;
-}
-
-.dummy2 {
-    grid-area: dummy2;
-}
-
 .dos-2 {
     grid-area: dos2;
     position: relative;
     animation: right-cross 7s ease 0s infinite forwards;
+    justify-self: end;
+    width: 50%;
 }
 
 #about .dos:first-child {
@@ -115,11 +111,33 @@ padding: 30px;
     grid-column-end: 2;
 }
 
-/* projects */
+/* skills */
 
-#projects {
-    height: 700px;
+#skills {
+    color: #f05454;
     border: 2px solid rgb(0, 4, 255);
+    display: grid;
+    grid-template-areas: 'box-1 box-1 box-1 box-1' 'box-2 box-2 box-2 box-2' 'box-3 box-3 box-3 box-3';
+    grid-gap: 1rem;
+}
+.skill-box{
+    width: 60%;
+    border: 2px solid lawngreen;
+}
+.skill-box img{
+    width: 15%;
+}
+#box-1{
+    grid-area: box-1;
+    justify-self: start;
+}
+#box-2{
+    grid-area: box-2;
+    justify-self: center;
+}
+#box-3{
+    grid-area: box-3;
+    justify-self: end;
 }
 
 /* contact */
@@ -139,13 +157,11 @@ footer {
 /* utility classes */
 
 .h-prim {
-    color: #171414;
     font-family: 'Sacramento', sans-serif;
     font-size: 9rem;
 }
 
 .h-sec {
-    color: #171414;
     font-size: 2.5rem;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
@@ -153,14 +169,12 @@ footer {
 }
 
 .h-ter {
-    color: #171414;
     font-size: 2rem;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
 }
 
 .para {
-    color: #171414;
     font-size: 1.5rem;
     font-weight: 500;
     font-family: 'Quicksand', sans-serif;
@@ -172,7 +186,9 @@ footer {
 .prim {
     background: #f05454;
 }
-
+.sec{
+    background: #171414;
+}
 .fade {
     opacity: 0;
 }
